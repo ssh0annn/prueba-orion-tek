@@ -66,13 +66,36 @@ API REST desarrollada en **Java con Spring Boot**, utilizando **CQRS** y **Postg
 ---
 
 
-¡Absolutamente! Aquí tienes la versión final de tu archivo README.md, con la documentación completa, un estilo profesional similar a una página web, y todas las secciones actualizadas, incluyendo la configuración basada en application.properties.Puedes copiar y pegar este bloque de código directamente en tu repositorio.✨ Proyecto Técnico: Gestión de Clientes y Direcciones OrionTek💻 Solución informática implementada bajo la arquitectura CQRS, diseñada para el manejo eficiente y escalable de la información de clientes y sus direcciones.🏛️ Arquitectura y Stack TecnológicoLa solución se basa en el patrón CQRS (Command Query Responsibility Segregation), separando las operaciones transaccionales (Comandos) de las operaciones de lectura optimizada (Consultas).Getty ImagesComponenteTecnologíaVersión ClavePropósito⚡BackendJava21+Lenguaje robusto y de alto rendimiento.☕FrameworkSpring Boot3.2+Inversión de Control (IoC) y desarrollo rápido de API REST.🍃Base de DatosPostgreSQL14+Persistencia de datos transaccionales, clave para el lado de Comandos.🐘PersistenciaSpring Data JPA / Hibernate-Mapeo Objeto-Relacional para interacción con la DB.💾Configuraciónapplication.properties-Configuración simple y estándar de Spring Boot.⚙️EstructuraMaven3.xGestión de dependencias y automatización de la compilación.📦⚙️ Instalación y Configuración del EntornoSigue estos pasos para obtener una copia del proyecto y ponerlo en marcha en tu entorno local.1. Requisitos IndispensablesAsegúrate de tener instalados:JDK (Java Development Kit): Versión 21 o superior.Maven: 3.x.PostgreSQL: Servidor de base de datos instalado y corriendo (local o Docker).Git: Para clonar el repositorio.2. Clonación del RepositorioAbre tu terminal y ejecuta:Bashgit clone <URL-DE-TU-REPOSitorio>
-cd oriontek-clientes-cqrs
-3. Configuración de Base de Datos (.properties)El proyecto utiliza PostgreSQL y se configura a través del archivo application.properties.Crea la base de datos (ejemplo):SQLCREATE DATABASE oriontek_db;
-Configura application.properties: Edita el archivo src/main/resources/application.properties y ajusta las siguientes líneas con tus credenciales reales:Properties# Credenciales de acceso
-spring.datasource.url=jdbc:postgresql://localhost:5432/oriontek_db
-spring.datasource.username=tu_usuario_db  # ⬅️ Reemplazar
-spring.datasource.password=tu_contraseña_db # ⬅️ Reemplazar
+⚙️ Configuración del Entorno con application.properties
+1. Archivo application.properties
+Crea o edita el archivo src/main/resources/application.properties con la siguiente información. Asegúrate de reemplazar los valores de ejemplo con tus credenciales reales de PostgreSQL.
 
-# Hibernate: Creación de esquema
-spring.jpa.hibernate.ddl-auto=update 
+# =================================================================
+# Configuración de Servidor
+# =================================================================
+server.port= <- puero app
+
+# =================================================================
+# Configuración de Base de Datos (PostgreSQL)
+# =================================================================
+
+# 1. Driver de la base de datos
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+# 2. URL de conexión (Ajusta el puerto o nombre de la DB si es necesario)
+spring.datasource.url=jdbc:postgresql://localhost:5432/{Nombre Base datos}
+
+# 3. Credenciales de acceso
+spring.datasource.username={usurios} 
+spring.datasource.password={password}
+
+# =================================================================
+# Configuración de JPA / Hibernate
+# =================================================================
+
+# Hibernate: Muestra el SQL generado en consola (útil para debug)
+spring.jpa.show-sql=true
+
+# Hibernate: Formatea el SQL para mejor lectura
+spring.jpa.properties.hibernate.format_sql=true
+
