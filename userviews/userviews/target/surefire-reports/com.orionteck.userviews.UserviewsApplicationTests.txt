@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.orionteck.userviews.UserviewsApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.506 s -- in com.orionteck.userviews.UserviewsApplicationTests
