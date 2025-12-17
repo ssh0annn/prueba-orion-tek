@@ -62,7 +62,7 @@ API REST desarrollada en **Java con Spring Boot**, utilizando **CQRS** y **Postg
 | 3    | GET    | `/api/clientes/{id}`               | CONSULTA   | Obtiene el detalle del cliente con direcciones. Respuesta: **200 OK** |
 | 4    | GET    | `/api/clientes`                    | CONSULTA   | Lista todos los clientes. Respuesta: **200 OK** |
 | 5    | DELETE | `/api/clientes/{id}`               | COMANDO    | Elimina un cliente y sus direcciones. Respuesta: **204 No Content** |
-| 6    | PUT | `/api/clientes/{id}`               | COMANDO    | Editar cliente. Respuesta: {ID} actualiado |
+| 6    | PUT | `/api/clientes/{id}`               | COMANDO    | Editar cliente Respuesta: {ID} actualiado |
 
 
 ---
